@@ -31,6 +31,11 @@ public class LoginCtrl {
 	public String index() {
 		return "/static/index.html";
 	}
+	
+	@RequestMapping("/welcome")
+	public String welcome() {
+		return "/static/index.html";
+	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login2(DragonCharacter user, HttpServletRequest request) {

@@ -10,6 +10,14 @@ import com.revature.domain.Finisher;
 
 @Repository
 public class DragonDaoImp implements DragonDao {
+	
+	static{
+	       try {
+	           Class.forName("oracle.jdbc.driver.OracleDriver");
+	       } catch (ClassNotFoundException e) {
+	           e.printStackTrace();
+	       }
+	   }
 
 	@Autowired
 	private SessionFactory sessionFactory;
